@@ -35,7 +35,7 @@ const Login = () => {
         </div>
         <button
           type="submit"
-          className="bg-light-primary dark dark:bg-dark-primary px-3 py-1 rounded-md hover:opacity-95"
+          className="bg-light-primary dark dark:bg-dark-primary px-3 py-1 rounded-md hover:opacity-95 cursor-pointer"
         >
           Sign in
         </button>
