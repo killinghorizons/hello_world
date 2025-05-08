@@ -2,8 +2,8 @@ import { IArticle } from "@/types/article";
 
 const Article = ({ language, snippet }: IArticle) => {
   return (
-    <article className="bg-light-background-layer dark:bg-dark-background-layer p-5 border border-light-border dark:border-dark-border overflow-x-auto rounded-md shadow-md ">
-      <div className="flex items-center text-light-primary dark:text-dark-primary">
+    <article className="bg-light-background-layer dark:bg-dark-background-layer p-5 border border-light-border dark:border-dark-border overflow-x-auto rounded-md shadow-md">
+      <div className="flex items-center text-light-primary dark:text-dark-primary mb-5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -20,7 +20,7 @@ const Article = ({ language, snippet }: IArticle) => {
         </svg>
         <h2 className="inline-block font-bold text-3xl">-> {language}</h2>
       </div>
-      <pre className="font-mono">{snippet}</pre>
+      <pre className="font-mono"><code>{snippet}</code></pre>
     </article>
   );
 };
