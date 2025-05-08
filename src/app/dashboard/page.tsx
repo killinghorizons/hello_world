@@ -8,10 +8,13 @@ const Dashboard = async () => {
       id: true,
       language: true,
       snippet: true,
+      createdAt: true,
     },
   });
 
-  console.log(articles.slice(0, 5));
+  console.log(
+    articles.filter(({ language }) => language.toLowerCase() === "vale")
+  );
 
   return (
     <div className="py-20">
@@ -20,7 +23,7 @@ const Dashboard = async () => {
       </h1>
       <section>
         <CreateForm />
-        <ArticleTable articles={articles.slice(0, 100)} />
+        <ArticleTable articles={articles} />
       </section>
     </div>
   );

@@ -19,6 +19,10 @@ const ArticlesTable = ({ articles }: { articles: IArticle[] }) => {
   const columns = useMemo(
     () => [
       {
+        accessorKey: "id",
+        header: "Id",
+      },
+      {
         accessorKey: "language",
         header: "Language",
       },
