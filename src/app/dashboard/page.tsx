@@ -1,4 +1,5 @@
 import ArticleTable from "@/components/ArticlesTable";
+import CreateForm from "@/components/CreateForm";
 import prisma from "@/lib/prisma";
 
 const Dashboard = async () => {
@@ -18,6 +19,7 @@ const Dashboard = async () => {
         Dashboard
       </h1>
       <section>
+        <CreateForm />
         <ArticleTable articles={articles.slice(0, 100)} />
       </section>
     </div>

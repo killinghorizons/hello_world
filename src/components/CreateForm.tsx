@@ -1,10 +1,9 @@
 "use client";
-import { IArticle } from "@/types/article";
 import { ChangeEvent, useState } from "react";
 
-const EditForm = ({ article }: { article: IArticle }) => {
-  const [language, setLanguage] = useState(article.language);
-  const [snippet, setSnippet] = useState(article.snippet);
+const CreateForm = () => {
+  const [language, setLanguage] = useState("");
+  const [snippet, setSnippet] = useState("");
 
   const handleLanguage = (e: ChangeEvent<HTMLInputElement>) => {
     setLanguage(e.target.value);
@@ -28,8 +27,8 @@ const EditForm = ({ article }: { article: IArticle }) => {
       onSubmit={handleSubmit}
       className="bg-light-background-layer dark:bg-dark-background-layer p-5 border border-light-border dark:border-dark-border overflow-x-auto rounded-md shadow-md"
     >
-      <h1 className="font-black tracking-tighter text-3xl lg:text-5xl text-center mb-4 text-light-warning dark:text-light-warning">
-        Edit
+      <h1 className="font-black tracking-tighter text-3xl lg:text-5xl text-center mb-4 text-light-success dark:text-light-success">
+        Create
       </h1>
       <div className="mb-6">
         <label htmlFor="language" className="block text-sm mb-2">
@@ -58,12 +57,12 @@ const EditForm = ({ article }: { article: IArticle }) => {
       </div>
       <button
         type="submit"
-        className="bg-light-warning dark dark:bg-dark-warning px-3 py-1 rounded-md hover:opacity-95"
+        className="bg-light-success dark dark:bg-dark-success px-3 py-1 rounded-md hover:opacity-95"
       >
-        Edit
+        Create
       </button>
     </form>
   );
 };
 
-export default EditForm;
+export default CreateForm;

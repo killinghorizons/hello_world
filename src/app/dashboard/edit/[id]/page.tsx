@@ -18,9 +18,6 @@ const Edit = async ({ params }: { params: { id: string } }) => {
 
   return (
     <div className="py-20">
-      <h1 className="font-black tracking-tighter text-3xl lg:text-5xl text-center">
-        Edit
-      </h1>
       <EditForm article={article} />
     </div>
   );
